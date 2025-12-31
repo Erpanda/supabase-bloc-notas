@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlocNotas</title>
+</head>
+<body>
+    <script>
+        const user = localStorage.getItem('user');
+        
+        if (user) {
+            window.location.href = 'public/dashboard.html';
+        } else {
+            window.location.href = 'public/home.html';
+        }
+    </script>
+</body>
+</html>
