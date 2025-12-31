@@ -7,7 +7,7 @@ function generarNavbar(paginaActual = '', estaAutenticado = false) {
     const navbarHTML = `
         <nav class="navbar fixed-top bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="../index.html">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="dashboard">
                     <img src="../src/assets/img/log.png" alt="logo" width="40" height="40">
                     <span class="fs-5 fw-bold">BlocNotas</span>
                 </a>
@@ -26,14 +26,14 @@ function generarNavbar(paginaActual = '', estaAutenticado = false) {
                         <li class="nav-item">
                             <a class="nav-link ${paginaActual === 'misNotas' ? 'active' : ''}"
                             ${paginaActual === 'misNotas' ? 'aria-current="page"' : ''}
-                            href="dashboard.html">
+                            href="dashboard">
                                 Mis notas
                             </a>
                         </li>    
                         <li class="nav-item">
                             <a class="nav-link ${paginaActual === 'crearNota' ? 'active' : ''}"
                             ${paginaActual === 'crearNota' ? 'aria-current="page"' : ''}
-                            href="crearTarea.html">
+                            href="crearTarea">
                                 Crear nota
                             </a>
                         </li>
@@ -68,7 +68,7 @@ async function manejarLogout() {
     const resultado = await cerrarSesion();
     
     if (resultado.success) {
-        window.location.href = '../index.html';
+        window.location.href = 'index';
     } else {
         alert('Error al cerrar sesión. Intenta de nuevo.');
     }

@@ -51,7 +51,7 @@ async function manejarRegistro(e) {
         
         // Redirigir al login después de 3 segundos
         setTimeout(() => {
-            window.location.href = 'login.html';
+            window.location.href = 'login';
         }, 3000);
         
     } else {

@@ -31,7 +31,7 @@ async function manejarLogin(e) {
     const resultado = await iniciarSesion(email, password);
     
     if (resultado.success) {
-        window.location.href = 'dashboard.html';
+        window.location.href = 'dashboard';
     } else {
         mostrarError(resultado.error || 'Error al iniciar sesión. Verifica tus credenciales.');
         
