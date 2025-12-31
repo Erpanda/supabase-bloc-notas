@@ -63,10 +63,10 @@ function generarFormularioTarea() {
 
     if (formularioTarea) {
         formularioTarea.innerHTML = `
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mx-3 my-5 mx-md-0 my-md-0">
                 
                 <div class="card shadow-sm border-1 rounded-4 overflow-hidden px-0">
-                    <div class="card-header bg-dark text-white py-3 text-center d-none d-md-block">
+                    <div class="card-header bg-dark text-white py-3 text-center">
                         <h4 class="mb-0">
                             <i class="bi bi-plus-circle me-2"></i>Crear una nueva tarea
                         </h4>
