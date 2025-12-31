@@ -36,14 +36,14 @@ function verificarAutenticacion() {
 // Redirigir si no está autenticado
 function protegerRuta() {
     if (!verificarAutenticacion()) {
-        window.location.href = '../../../index.html';
+        window.location.href = '/';
     }
 }
 
 // Redirigir si YA está autenticado (para login/register)
 function redirigirSiAutenticado() {
     if (verificarAutenticacion()) {
-        window.location.href = 'dashboard.html';
+        window.location.href = 'dashboard';
     }
 }
 
