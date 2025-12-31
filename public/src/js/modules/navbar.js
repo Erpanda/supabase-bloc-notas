@@ -7,9 +7,11 @@ function generarNavbar(paginaActual = '', estaAutenticado = false) {
     const navbarHTML = `
         <nav class="navbar fixed-top bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="dashboard">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="../index.html">
                     <img src="../src/assets/img/log.png" alt="logo" width="40" height="40">
-                    <span class="fs-5 fw-bold">BlocNotas</span>
+                    <!-- d-none d-sm-inline: permite ocultar algo en dispositivos pequeños y mostrarlo en dispositivos grandes (span) -->
+                    <!-- d-none d-lg-block: lo mismo pero en dispositivos grandes (div) -->
+                    <span class="fs-5 fw-bold d-none d-sm-inline">BlocNotas</span>
                 </a>
                 ${estaAutenticado && profile ? `
                     <div class="ms-auto text-light fw-medium me-3">Bienvenido, <strong>${profile.nombre} ${profile.apellido}</strong></div>
@@ -68,7 +70,7 @@ async function manejarLogout() {
     const resultado = await cerrarSesion();
     
     if (resultado.success) {
-        window.location.href = '/';
+        window.location.href = '../index.html';
     } else {
         alert('Error al cerrar sesión. Intenta de nuevo.');
     }
