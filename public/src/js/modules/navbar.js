@@ -7,7 +7,7 @@ function generarNavbar(paginaActual = '', estaAutenticado = false) {
     const navbarHTML = `
         <nav class="navbar fixed-top bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="dashboard">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-light" href="index">
                     <img src="../src/assets/img/log.png" alt="logo" width="40" height="40">
                     <span class="fs-5 fw-bold">BlocNotas</span>
                 </a>
