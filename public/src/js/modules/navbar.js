@@ -70,7 +70,7 @@ async function manejarLogout() {
     const resultado = await cerrarSesion();
     
     if (resultado.success) {
-        window.location.href = '../index.html';
+        window.location.href = '/';
     } else {
         alert('Error al cerrar sesión. Intenta de nuevo.');
     }
